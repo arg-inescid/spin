@@ -116,6 +116,10 @@ impl<Executor: TriggerExecutor> TriggerExecutorBuilder<Executor> {
         &mut self.config
     }
 
+    pub fn wasmtime_config_mut(&mut self) -> &mut spin_core::wasmtime::Config {
+        self.config.wasmtime_config()
+    }
+    
     pub fn hooks(&mut self, hooks: impl TriggerHooks + 'static) -> &mut Self {
         self.hooks.push(Box::new(hooks));
         self
