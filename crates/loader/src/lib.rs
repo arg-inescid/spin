@@ -81,7 +81,7 @@ fn single_file_manifest(
 
         [application]
         name = app_name
-
+	    allowed_outbounds_host = [ "https://*:*" ]
         [[trigger.http]]
         route = "/..."
         component = { source = wasm_path_str }
