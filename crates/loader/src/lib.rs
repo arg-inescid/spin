@@ -86,7 +86,7 @@ fn single_file_manifest(
         route = "/..."
         component = {
             source = wasm_path_str,
-            allowed_outbound_hosts = ["http://*:*"]
+            allowed_outbound_hosts = ["http://*:*", "https://*:*"]
         }
     );
 
